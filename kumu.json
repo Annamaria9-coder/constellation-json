@@ -1,78 +1,178 @@
 {
   "elements": [
     {
+      "id": "core_issue",
       "label": "Digital Dependency in Africa",
-      "type": "Core Issue",
-      "description": "Systemic reliance on foreign-owned digital infrastructure and AI platforms."
+      "description": "Systemic reliance on foreign-owned digital infrastructure, platforms, and data governance systems that limit African control and autonomy.",
+      "group": "Core Issue"
     },
     {
+      "id": "foreign_tech",
       "label": "Foreign Tech Companies",
-      "type": "Actor",
-      "description": "Global firms like Google, Meta, and Huawei that own AI platforms and infrastructure."
+      "description": "Companies like Google, Meta, and Huawei that dominate infrastructure, platforms, and data processing in Africa.",
+      "group": "Corporate"
     },
     {
+      "id": "african_governments",
       "label": "African Governments",
-      "type": "Actor",
-      "description": "National governments regulating digital space but limited by funding and external influence."
+      "description": "Policy makers and regulators who mediate tech partnerships, pass laws, and balance development goals with dependency risks.",
+      "group": "Government"
     },
     {
+      "id": "donor_institutions",
       "label": "Donor Institutions",
-      "type": "Actor",
-      "description": "Organizations like World Bank and USAID that fund digital projects but shape priorities."
+      "description": "Entities like the World Bank and USAID that fund digital infrastructure but often set the rules of engagement through conditionality.",
+      "group": "Donor"
     },
     {
+      "id": "local_startups",
       "label": "Local Startups & Developers",
-      "type": "Actor",
-      "description": "Innovators building local tools but facing infrastructure and funding challenges."
+      "description": "Tech innovators and entrepreneurs building localized solutions, often facing barriers like limited funding or infrastructure access.",
+      "group": "Community"
     },
     {
+      "id": "civil_society",
       "label": "Civil Society & NGOs",
-      "type": "Actor",
-      "description": "Groups pushing for inclusion, data rights, and accountability in digital systems."
+      "description": "Digital rights advocates, watchdogs, and grassroots groups working for inclusion, fairness, and accountability in digital systems.",
+      "group": "Community"
     },
     {
+      "id": "citizens",
       "label": "Citizens",
-      "type": "Impacted Group",
-      "description": "The general population, especially youth, women, and low-income communities, affected by digital inequality."
+      "description": "General public — especially youth, women, and low-income communities — affected by tech policies and infrastructure gaps.",
+      "group": "Community"
     },
     {
+      "id": "infrastructure_ownership",
       "label": "Infrastructure Ownership",
-      "type": "Structural Force",
-      "description": "Foreign control of physical and cloud-based digital infrastructure in Africa."
+      "description": "Who controls the digital backbone — undersea cables, telecom networks, cloud systems — matters for sovereignty and autonomy.",
+      "group": "Structural"
     },
     {
+      "id": "policy_influence",
       "label": "Policy Influence",
-      "type": "Structural Force",
-      "description": "National policies shaped by donor frameworks and external policy models."
+      "description": "National tech policies shaped by external actors via advice, alignment, and conditions tied to funding.",
+      "group": "Structural"
     },
     {
+      "id": "data_control",
       "label": "Data Ownership & Control",
-      "type": "Structural Force",
-      "description": "Local data often processed and monetized outside Africa."
+      "description": "Control over African data — where it's stored, who owns it, who profits — is often outside African jurisdictions.",
+      "group": "Structural"
     },
     {
+      "id": "funding_flows",
       "label": "Funding Flows",
-      "type": "Structural Force",
-      "description": "Digital investments controlled by external donors, influencing what gets built and how."
+      "description": "External donors and investors influence what gets built, where, and how, shaping tech priorities.",
+      "group": "Structural"
+    },
+    {
+      "id": "legend",
+      "label": "Legend",
+      "description": "🎯 Core Issue: Digital Dependency in Africa\n🏛️ Government: African Governments\n📦 Corporate: Foreign Tech Companies\n🤝 Community: Citizens, NGOs, Startups\n🏗️ Structural: Infrastructure, Data, Funding, Policy\n💸 Donor: Funding Institutions",
+      "group": "Legend"
     }
   ],
   "connections": [
-    { "from": "Foreign Tech Companies", "to": "Infrastructure Ownership", "type": "Owns" },
-    { "from": "Foreign Tech Companies", "to": "African Governments", "type": "Influences", "description": "Through platform dominance and investment deals" },
-    { "from": "Foreign Tech Companies", "to": "Citizens", "type": "Extracts", "description": "Harvest user data and control platforms" },
-    { "from": "Donor Institutions", "to": "Funding Flows", "type": "Controls" },
-    { "from": "Donor Institutions", "to": "African Governments", "type": "Conditions", "description": "Shape priorities through funding" },
-    { "from": "Funding Flows", "to": "Infrastructure Ownership", "type": "Enables" },
-    { "from": "Funding Flows", "to": "Policy Influence", "type": "Shapes" },
-    { "from": "Policy Influence", "to": "African Governments", "type": "Constrains" },
-    { "from": "Civil Society & NGOs", "to": "African Governments", "type": "Advocates" },
-    { "from": "Local Startups & Developers", "to": "Citizens", "type": "Serves" },
-    { "from": "Local Startups & Developers", "to": "Foreign Tech Companies", "type": "Competes" },
-    { "from": "Data Ownership & Control", "to": "Citizens", "type": "Disempowers" },
-    { "from": "African Governments", "to": "Citizens", "type": "Represents" },
-    { "from": "Digital Dependency in Africa", "to": "Infrastructure Ownership", "type": "Reinforced By" },
-    { "from": "Digital Dependency in Africa", "to": "Policy Influence", "type": "Reinforced By" },
-    { "from": "Digital Dependency in Africa", "to": "Funding Flows", "type": "Reinforced By" },
-    { "from": "Digital Dependency in Africa", "to": "Data Ownership & Control", "type": "Reinforced By" }
-  ]
+    {
+      "from": "foreign_tech",
+      "to": "infrastructure_ownership",
+      "description": "Own and operate infrastructure like data centers and cables.",
+      "type": "Owns"
+    },
+    {
+      "from": "foreign_tech",
+      "to": "data_control",
+      "description": "Control and extract value from African user data.",
+      "type": "Controls"
+    },
+    {
+      "from": "foreign_tech",
+      "to": "african_governments",
+      "description": "Influence policy through tech deals and lobbying.",
+      "type": "Influences"
+    },
+    {
+      "from": "donor_institutions",
+      "to": "funding_flows",
+      "description": "Channel money for digital infrastructure projects.",
+      "type": "Provides"
+    },
+    {
+      "from": "donor_institutions",
+      "to": "african_governments",
+      "description": "Shape digital policy through conditional aid and advice.",
+      "type": "Shapes"
+    },
+    {
+      "from": "funding_flows",
+      "to": "infrastructure_ownership",
+      "description": "Determine what tech gets built and who builds it.",
+      "type": "Enables"
+    },
+    {
+      "from": "funding_flows",
+      "to": "policy_influence",
+      "description": "Funding conditions impact national digital strategies.",
+      "type": "Impacts"
+    },
+    {
+      "from": "african_governments",
+      "to": "citizens",
+      "description": "Policies and services are meant to serve the public.",
+      "type": "Represents"
+    },
+    {
+      "from": "civil_society",
+      "to": "african_governments",
+      "description": "Push for more inclusive and accountable tech governance.",
+      "type": "Advocates"
+    },
+    {
+      "from": "local_startups",
+      "to": "citizens",
+      "description": "Provide locally-relevant digital solutions.",
+      "type": "Serves"
+    },
+    {
+      "from": "local_startups",
+      "to": "foreign_tech",
+      "description": "Compete or collaborate with dominant platforms.",
+      "type": "Interacts With"
+    },
+    {
+      "from": "data_control",
+      "to": "citizens",
+      "description": "Affects privacy, surveillance, and data access.",
+      "type": "Impacts"
+    },
+    {
+      "from": "infrastructure_ownership",
+      "to": "core_issue",
+      "description": "Lack of local control fuels digital dependency.",
+      "type": "Reinforces"
+    },
+    {
+      "from": "policy_influence",
+      "to": "core_issue",
+      "description": "External pressure reduces sovereign decision-making.",
+      "type": "Reinforces"
+    },
+    {
+      "from": "funding_flows",
+      "to": "core_issue",
+      "description": "External finance often shapes the whole system.",
+      "type": "Reinforces"
+    },
+    {
+      "from": "data_control",
+      "to": "core_issue",
+      "description": "Loss of data autonomy deepens dependency.",
+      "type": "Reinforces"
+    }
+  ],
+  "settings": {
+    "connection_style": "curved",
+    "layout": "circular"
+  }
 }
