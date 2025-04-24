@@ -1,46 +1,40 @@
 {
   "elements": [
-    {"id": "1", "label": "Digital Dependency in Africa", "group": "Core Issue", "size": "2.5"},
-    {"id": "2", "label": "Data Ownership & Control", "group": "Structural", "size": "2.0"},
-    {"id": "3", "label": "Infrastructure Ownership", "group": "Structural", "size": "2.0"},
-    {"id": "4", "label": "Citizens", "group": "Community", "size": "1.5"},
-    {"id": "5", "label": "Foreign Tech Companies", "group": "Corporate", "size": "2.0"},
-    {"id": "6", "label": "Local Startups & Developers", "group": "Community", "size": "1.5"},
-    {"id": "7", "label": "African Governments", "group": "Government", "size": "2.0"},
-    {"id": "8", "label": "Civil Society & NGOs", "group": "Community", "size": "1.5"},
-    {"id": "9", "label": "Donor Institutions", "group": "Donor", "size": "2.0"},
-    {"id": "10", "label": "Funding Flows", "group": "Structural", "size": "2.0"},
-    {"id": "11", "label": "Policy Influence", "group": "Government", "size": "1.8"},
-    {"id": "99", "label": "Legend", "group": "Legend", "size": "1.0"}
+    {"id": "1", "label": "Foreign Tech Companies", "type": "Actor", "description": "Own and control key digital infrastructure across Africa", "color": "#FF6B6B", "x": 100, "y": 200},
+    {"id": "2", "label": "African Governments", "type": "Actor", "description": "Set national policies but often depend on foreign funding and platforms", "color": "#4ECDC4", "x": 300, "y": 200},
+    {"id": "3", "label": "Donor Institutions", "type": "Actor", "description": "Fund infrastructure projects and influence policy directions", "color": "#FFCA3A", "x": 200, "y": 50},
+    {"id": "4", "label": "Digital Dependency in Africa", "type": "Concept", "description": "A result of limited local control over data, platforms, and policies", "color": "#9D4EDD", "x": 300, "y": 350},
+    {"id": "5", "label": "Citizens", "type": "Actor", "description": "Often excluded from governance decisions but directly affected by them", "color": "#3A86FF", "x": 500, "y": 200},
+    {"id": "6", "label": "Infrastructure Ownership", "type": "Concept", "description": "Refers to control over data centers, telecom networks, and physical platforms", "color": "#FF9F1C", "x": 300, "y": 100},
+    {"id": "7", "label": "Data Ownership & Control", "type": "Concept", "description": "Concerns over who owns and governs African user data", "color": "#8338EC", "x": 400, "y": 100},
+    {"id": "8", "label": "Funding Flows", "type": "Force", "description": "How money moves from donors to governments or corporations", "color": "#06D6A0", "x": 200, "y": 250},
+    {"id": "9", "label": "Policy Influence", "type": "Force", "description": "How policy is shaped through international standards or conditional funding", "color": "#FF595E", "x": 100, "y": 50},
+    {"id": "10", "label": "Local Startups & Developers", "type": "Actor", "description": "Build local tools but struggle with limited resources and reach", "color": "#BDB2FF", "x": 500, "y": 300},
+    {"id": "11", "label": "Civil Society & NGOs", "type": "Actor", "description": "Advocate for rights, inclusion, and accountability", "color": "#8AC926", "x": 500, "y": 50}
   ],
 
   "connections": [
-    {"from": "1", "to": "2", "label": "shaped by"},
-    {"from": "1", "to": "3", "label": "built on"},
-    {"from": "1", "to": "10", "label": "driven by"},
-    {"from": "2", "to": "5", "label": "controlled by"},
-    {"from": "3", "to": "5", "label": "owned by"},
-    {"from": "3", "to": "4", "label": "affects"},
-    {"from": "2", "to": "4", "label": "limits agency of"},
-    {"from": "5", "to": "7", "label": "influences"},
-    {"from": "6", "to": "7", "label": "engages with"},
-    {"from": "4", "to": "7", "label": "voted by"},
-    {"from": "7", "to": "10", "label": "allocates"},
-    {"from": "9", "to": "10", "label": "supplies"},
-    {"from": "9", "to": "7", "label": "funds"},
-    {"from": "8", "to": "7", "label": "advocates to"},
-    {"from": "10", "to": "11", "label": "shapes"},
-    {"from": "11", "to": "1", "label": "reinforces"},
-    {"from": "4", "to": "6", "label": "supported by"}
+    {"source": "1", "target": "6", "label": "owns", "color": "#FF6B6B"},
+    {"source": "1", "target": "7", "label": "controls", "color": "#FF6B6B"},
+    {"source": "3", "target": "8", "label": "funds", "color": "#FFCA3A"},
+    {"source": "8", "target": "2", "label": "allocates to", "color": "#06D6A0"},
+    {"source": "8", "target": "1", "label": "funds partnerships", "color": "#06D6A0"},
+    {"source": "2", "target": "4", "label": "contributes to", "color": "#4ECDC4"},
+    {"source": "1", "target": "4", "label": "drives", "color": "#FF6B6B"},
+    {"source": "6", "target": "4", "label": "enables", "color": "#FF9F1C"},
+    {"source": "7", "target": "4", "label": "enables", "color": "#8338EC"},
+    {"source": "2", "target": "5", "label": "governs", "color": "#4ECDC4"},
+    {"source": "5", "target": "4", "label": "affected by", "color": "#3A86FF"},
+    {"source": "10", "target": "4", "label": "limited influence on", "color": "#BDB2FF"},
+    {"source": "11", "target": "2", "label": "advocates to", "color": "#8AC926"},
+    {"source": "11", "target": "4", "label": "raises awareness of", "color": "#8AC926"},
+    {"source": "9", "target": "2", "label": "shapes", "color": "#FF595E"},
+    {"source": "9", "target": "4", "label": "reinforces", "color": "#FF595E"}
   ],
 
-  "groups": {
-    "Core Issue": {"color": "#e63946"},
-    "Structural": {"color": "#6c757d"},
-    "Government": {"color": "#2a9d8f"},
-    "Corporate": {"color": "#f4a261"},
-    "Donor": {"color": "#457b9d"},
-    "Community": {"color": "#9d4edd"},
-    "Legend": {"color": "#ffffff", "stroke": "#d62828"}
-  }
+  "tags": [
+    {"name": "Actor", "color": "#118AB2"},
+    {"name": "Concept", "color": "#FFD166"},
+    {"name": "Force", "color": "#EF476F"}
+  ]
 }
