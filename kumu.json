@@ -1,40 +1,105 @@
 {
   "elements": [
-    {"id": "1", "label": "Foreign Tech Companies", "type": "Actor", "description": "Own and control key digital infrastructure across Africa", "color": "#FF6B6B", "x": 100, "y": 200},
-    {"id": "2", "label": "African Governments", "type": "Actor", "description": "Set national policies but often depend on foreign funding and platforms", "color": "#4ECDC4", "x": 300, "y": 200},
-    {"id": "3", "label": "Donor Institutions", "type": "Actor", "description": "Fund infrastructure projects and influence policy directions", "color": "#FFCA3A", "x": 200, "y": 50},
-    {"id": "4", "label": "Digital Dependency in Africa", "type": "Concept", "description": "A result of limited local control over data, platforms, and policies", "color": "#9D4EDD", "x": 300, "y": 350},
-    {"id": "5", "label": "Citizens", "type": "Actor", "description": "Often excluded from governance decisions but directly affected by them", "color": "#3A86FF", "x": 500, "y": 200},
-    {"id": "6", "label": "Infrastructure Ownership", "type": "Concept", "description": "Refers to control over data centers, telecom networks, and physical platforms", "color": "#FF9F1C", "x": 300, "y": 100},
-    {"id": "7", "label": "Data Ownership & Control", "type": "Concept", "description": "Concerns over who owns and governs African user data", "color": "#8338EC", "x": 400, "y": 100},
-    {"id": "8", "label": "Funding Flows", "type": "Force", "description": "How money moves from donors to governments or corporations", "color": "#06D6A0", "x": 200, "y": 250},
-    {"id": "9", "label": "Policy Influence", "type": "Force", "description": "How policy is shaped through international standards or conditional funding", "color": "#FF595E", "x": 100, "y": 50},
-    {"id": "10", "label": "Local Startups & Developers", "type": "Actor", "description": "Build local tools but struggle with limited resources and reach", "color": "#BDB2FF", "x": 500, "y": 300},
-    {"id": "11", "label": "Civil Society & NGOs", "type": "Actor", "description": "Advocate for rights, inclusion, and accountability", "color": "#8AC926", "x": 500, "y": 50}
+    {
+      "id": "1",
+      "label": "Digital Dependency in Africa",
+      "type": "central concept",
+      "description": "The systemic reliance on external actors for digital infrastructure, governance, and services across African nations."
+    },
+    {
+      "id": "2",
+      "label": "Foreign Tech Companies",
+      "type": "actor",
+      "group": "Private Sector",
+      "color": "#FFA500",
+      "description": "Own and control most cloud platforms, undersea cables, and data processing infrastructure used across Africa."
+    },
+    {
+      "id": "3",
+      "label": "African Governments",
+      "type": "actor",
+      "group": "Government",
+      "color": "#228B22",
+      "description": "Set policy frameworks, negotiate infrastructure deals, and act as both implementers and intermediaries."
+    },
+    {
+      "id": "4",
+      "label": "Donor Institutions",
+      "type": "actor",
+      "group": "Donor",
+      "color": "#1E90FF",
+      "description": "Finance digital infrastructure projects, often with conditions that reinforce dependence."
+    },
+    {
+      "id": "5",
+      "label": "Local Startups & Developers",
+      "type": "actor",
+      "group": "Local Innovators",
+      "color": "#FF4500",
+      "description": "Create local solutions but face structural barriers to scale, infrastructure, and funding."
+    },
+    {
+      "id": "6",
+      "label": "Citizens",
+      "type": "actor",
+      "group": "Impacted Groups",
+      "color": "#DC143C",
+      "description": "Most affected by digital systems but hold the least power to shape them."
+    },
+    {
+      "id": "7",
+      "label": "Civil Society & NGOs",
+      "type": "actor",
+      "group": "Civil Sector",
+      "color": "#800080",
+      "description": "Advocate for inclusion, rights, and accountability within the digital ecosystem."
+    },
+    {
+      "id": "8",
+      "label": "Funding Flows",
+      "type": "process",
+      "color": "#A9A9A9",
+      "description": "Movement of capital that determines what infrastructure is built, and by whom."
+    },
+    {
+      "id": "9",
+      "label": "Infrastructure Ownership",
+      "type": "factor",
+      "color": "#B0C4DE",
+      "description": "Control over digital infrastructure assets like cables, data centers, and towers."
+    },
+    {
+      "id": "10",
+      "label": "Policy Influence",
+      "type": "factor",
+      "color": "#BDB76B",
+      "description": "The ability to shape laws and frameworks governing digital technologies."
+    },
+    {
+      "id": "11",
+      "label": "Data Ownership & Control",
+      "type": "factor",
+      "color": "#B0E0E6",
+      "description": "Determines who stores, processes, and profits from user and platform data."
+    }
   ],
-
   "connections": [
-    {"source": "1", "target": "6", "label": "owns", "color": "#FF6B6B"},
-    {"source": "1", "target": "7", "label": "controls", "color": "#FF6B6B"},
-    {"source": "3", "target": "8", "label": "funds", "color": "#FFCA3A"},
-    {"source": "8", "target": "2", "label": "allocates to", "color": "#06D6A0"},
-    {"source": "8", "target": "1", "label": "funds partnerships", "color": "#06D6A0"},
-    {"source": "2", "target": "4", "label": "contributes to", "color": "#4ECDC4"},
-    {"source": "1", "target": "4", "label": "drives", "color": "#FF6B6B"},
-    {"source": "6", "target": "4", "label": "enables", "color": "#FF9F1C"},
-    {"source": "7", "target": "4", "label": "enables", "color": "#8338EC"},
-    {"source": "2", "target": "5", "label": "governs", "color": "#4ECDC4"},
-    {"source": "5", "target": "4", "label": "affected by", "color": "#3A86FF"},
-    {"source": "10", "target": "4", "label": "limited influence on", "color": "#BDB2FF"},
-    {"source": "11", "target": "2", "label": "advocates to", "color": "#8AC926"},
-    {"source": "11", "target": "4", "label": "raises awareness of", "color": "#8AC926"},
-    {"source": "9", "target": "2", "label": "shapes", "color": "#FF595E"},
-    {"source": "9", "target": "4", "label": "reinforces", "color": "#FF595E"}
-  ],
-
-  "tags": [
-    {"name": "Actor", "color": "#118AB2"},
-    {"name": "Concept", "color": "#FFD166"},
-    {"name": "Force", "color": "#EF476F"}
+    {"source": "4", "target": "8", "type": "funds"},
+    {"source": "8", "target": "3", "type": "allocates to"},
+    {"source": "3", "target": "9", "type": "manages"},
+    {"source": "9", "target": "2", "type": "built by"},
+    {"source": "9", "target": "11", "type": "feeds"},
+    {"source": "2", "target": "11", "type": "controls"},
+    {"source": "11", "target": "1", "type": "drives"},
+    {"source": "10", "target": "1", "type": "shapes"},
+    {"source": "7", "target": "3", "type": "advocates to"},
+    {"source": "6", "target": "3", "type": "represented by"},
+    {"source": "6", "target": "2", "type": "uses platforms from"},
+    {"source": "5", "target": "9", "type": "dependent on"},
+    {"source": "5", "target": "2", "type": "competes with"},
+    {"source": "7", "target": "10", "type": "pressures"},
+    {"source": "3", "target": "10", "type": "shapes"},
+    {"source": "8", "target": "10", "type": "indirectly influences"},
+    {"source": "11", "target": "6", "type": "affects"}
   ]
 }
