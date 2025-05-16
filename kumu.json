@@ -9,7 +9,7 @@
     {
       "id": "foreign_tech",
       "label": "Foreign Tech Companies",
-      "description": "Companies like Google, Meta, and Huawei that dominate infrastructure, platforms, and data processing in Africa.",
+      "description": "Companies like Google, Meta, and Huawei that dominate infrastructure, platforms, and data processing in Africa. They shape access, design norms, and data flows.",
       "group": "Corporate"
     },
     {
@@ -67,9 +67,21 @@
       "group": "Structural"
     },
     {
+      "id": "ideological_frames",
+      "label": "Global Tech Narratives",
+      "description": "Ideas about 'innovation,' 'inclusion,' and 'digital transformation' that shape which projects are seen as legitimate or fundable.",
+      "group": "Structural"
+    },
+    {
+      "id": "colonial_legacies",
+      "label": "Colonial Legacies",
+      "description": "Historical structures of control, extraction, and governance that still influence how infrastructure and institutions are built and owned.",
+      "group": "Structural"
+    },
+    {
       "id": "legend",
       "label": "Legend",
-      "description": "🎯 Core Issue: Digital Dependency in Africa\n🏛️ Government: African Governments\n📦 Corporate: Foreign Tech Companies\n🤝 Community: Citizens, NGOs, Startups\n🏗️ Structural: Infrastructure, Data, Funding, Policy\n💸 Donor: Funding Institutions",
+      "description": "🎯 Core Issue: Digital Dependency in Africa\n🏛️ Government: African Governments\n📦 Corporate: Foreign Tech Companies\n🤝 Community: Citizens, NGOs, Startups\n🏗️ Structural: Infrastructure, Data, Funding, Policy, History\n💸 Donor: Funding Institutions",
       "group": "Legend"
     }
   ],
@@ -145,6 +157,24 @@
       "to": "citizens",
       "description": "Affects privacy, surveillance, and data access.",
       "type": "Impacts"
+    },
+    {
+      "from": "ideological_frames",
+      "to": "foreign_tech",
+      "description": "Shapes how digital solutions are framed and justified.",
+      "type": "Reinforces"
+    },
+    {
+      "from": "colonial_legacies",
+      "to": "funding_flows",
+      "description": "Influences who finances what, and under what terms.",
+      "type": "Shapes"
+    },
+    {
+      "from": "colonial_legacies",
+      "to": "infrastructure_ownership",
+      "description": "Historical control affects current ownership patterns.",
+      "type": "Echoes"
     },
     {
       "from": "infrastructure_ownership",
